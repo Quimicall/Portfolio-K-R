@@ -1,0 +1,81 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+        /* Adicione estilos CSS aqui, se necessário */
+        /* Reset de margens e preenchimentos para garantir uma aparência consistente */
+        body, h1, h2, h3, p, ul, li, figure {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #f0f0f0; /* Cor de fundo do corpo */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+            color: #333; /* Cor do texto padrão */
+        }
+        header {
+            background-color: #333; /* Cor de fundo do cabeçalho */
+            color: #fff; /* Cor do texto do cabeçalho */
+            text-align: center; /* Centraliza o texto */
+            padding: 20px 0; /* Espaçamento interno superior e inferior */
+        }
+
+        /* Estiliza a navegação no cabeçalho */
+        nav ul {
+            list-style: none; /* Remove marcadores de lista */
+        }
+
+        nav ul li {
+            display: inline; /* Exibe os itens de navegação na mesma linha */
+            margin-right: 20px; /* Espaçamento entre os itens de navegação */
+        }
+
+        nav a {
+            text-decoration: none; /* Remove sublinhado dos links */
+            color: #fff; /* Cor dos links no cabeçalho */
+        }
+
+        aside {
+            width: 25%; /* Largura da barra lateral */
+            background-color: #eee; /* Cor de fundo da barra lateral */
+            padding: 20px; /* Espaçamento interno em todos os lados */
+        }
+
+        /* Estiliza o container principal */
+        #content-container {
+            display: flex; /* Usa um layout flexível para o container */
+            padding: 20px; /* Espaçamento interno em todos os lados */
+            text-align: center;
+            padding: 20px;
+            margin: 20px 0;
+            
+        }
+
+        #content-container img{
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            margin: 0 auto;
+            border-radius: 5px; /* Cantos arredondados do formulário */
+        }
+
+        #content-container aside{
+            flex-grow: 1px; /* Ocupa o espaço restante no container principal */
+            padding: 70px ; /* Espaçamento interno em todos os lados */
+            margin-left: 100px;
+            background-color: #fff; /* Cor de fundo do conteúdo principal */
+            border-radius: 5px; /* Cantos arredondados do formulário */
+            
+        }
+
+        #main-container {
+            flex-grow: 1px; /* Ocupa o espaço restante no container principal */
+            padding: 20px; /* Espaçamento interno em todos os lados */
+            background-color: #fff; /* Cor de fundo do conteúdo principal */
+            border-radius: 5px; /* Cantos arredondados do formulário */
+            
+        }
+
+        footer {
+            background-color: #333; /* Cor de fundo do rodapé */
+            color: #fff; /* Cor do texto do rodapé */
+            text-align: center; /* Centraliza o texto no rodapé */
+            padding: 20px 0; /* Espaçamento interno superior e inferior */
+        }

@@ -1,0 +1,82 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+        /* Adicione estilos CSS aqui, se necessário */
+        /* Reset de margens e preenchimentos para garantir uma aparência consistente */
+        body, h1, h2, h3, p, ul, li, figure {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Define um estilo de fundo para o corpo do site */
+        body {
+            background-color: #f0f0f0; /* Cor de fundo do corpo */
+            font-family: Arial, sans-serif; /* Fonte padrão */
+            color: #333; /* Cor do texto padrão */
+        }
+
+        /* Estiliza o cabeçalho */
+        header {
+            background-color: #333; /* Cor de fundo do cabeçalho */
+            color: #fff; /* Cor do texto do cabeçalho */
+            text-align: center; /* Centraliza o texto */
+            padding: 20px 0; /* Espaçamento interno superior e inferior */
+        }
+
+        /* Estiliza a navegação no cabeçalho */
+        nav ul {
+            list-style: none; /* Remove marcadores de lista */
+        }
+
+        nav ul li {
+            display: inline; /* Exibe os itens de navegação na mesma linha */
+            margin-right: 20px; /* Espaçamento entre os itens de navegação */
+        }
+
+        nav a {
+            text-decoration: none; /* Remove sublinhado dos links */
+            color: #fff; /* Cor dos links no cabeçalho */
+        }
+
+        /* Estiliza o container principal */
+        #content-container {
+            display: flex; /* Usa um layout flexível para o container */
+            padding: 20px; /* Espaçamento interno em todos os lados */
+            margin: 20px;
+        }
+
+        #content-container2 {
+            display: flex; /* Usa um layout flexível para o container */
+            padding: 20px; /* Espaçamento interno em todos os lados */
+            margin: 20px;
+        }
+
+        /* Estiliza a barra lateral (aside) */
+        aside {
+            width: 25%; /* Largura da barra lateral */
+            background-color: #eee; /* Cor de fundo da barra lateral */
+            padding: 20px; /* Espaçamento interno em todos os lados */
+        }
+
+        /* Estiliza o conteúdo principal (main) */
+        #main-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #main-container2 {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estiliza o rodapé */
+        footer {
+            background-color: #333; /* Cor de fundo do rodapé */
+            color: #fff; /* Cor do texto do rodapé */
+            text-align: center; /* Centraliza o texto no rodapé */
+            padding: 20px 0; /* Espaçamento interno superior e inferior */
+        }

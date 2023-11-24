@@ -1,0 +1,354 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.flex{
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #9c0505;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover, form .btn-enviar input:hover{
+    box-shadow: 0px 0px 8px rgb(155, 3, 3);
+    transform: scale(1.05);
+    transition: .2s;
+}
+
+h2.titulo{
+    color: #ffffff;
+    font-size: 34px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #9c0505;
+}
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+    padding: 40px 4%;
+}
+
+header > .interface{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a{
+    color: #7d7d7d;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header a:hover{
+    color: #ffffff;
+    text-decoration: none;
+    transform: scale(1.05);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .logo img {
+    width: 230px;
+    height: auto;
+    position: relative;
+    border: 0;
+    border-radius: 30px;
+}
+
+/* ESTILO TOPO DO SITE*/
+
+section.site-top{
+    padding: 40px 4%;
+}
+
+section.site-top .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px;
+}
+
+.site-top h1{
+    color: #ffffff;
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.site-top .txt-top-site h1 span {
+    color: #9c0505;
+    font-size: 65px;
+}
+
+.site-top .txt-top-site p {
+    color: #ffffff;
+    margin: 40px 0;
+}
+
+.site-top .img-top-site img{
+    width: 330px;
+    height: auto;
+    position: relative;
+    border: 0;
+    border-radius: 30px;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+@keyframes flutuar {
+    0%{
+        top: 0;
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES*/
+
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    margin-top: 45px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #d6d6d66b;
+}
+
+.especialidades .especialidades-box ion-icon {
+    font-size: 88px;
+    color: #9c0505;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+/* ESTILO DO SOBRE */
+
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #ffffff;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 64px;
+    line-height: 70px;
+    margin-bottom: 20px;
+}
+
+.sobre .txt-sobre h2 span {
+    color: #9c0505;
+    display: block;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    border: 0;
+    background-color: #9c0505;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 0 10px;
+    transition: .2s;
+}
+
+.sobre .img-sobre img{
+    width: 330px;
+    height: auto;
+    position: relative;
+    border: 0;
+    border-radius: 30px;
+}
+
+/* ESTILO DO PORTFÓLIO */
+
+section.portfolio{
+    padding: 80px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.041)
+}
+
+section.portfolio .flex {
+    gap: 80px;
+    margin-top: 60px;
+}
+
+.img-port{
+    width: 360px;
+    height: 460px;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 5s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000ad;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: 600;
+    color: #ffffff;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover{
+    opacity: 1;
+}
+
+/* ESTILO FORMULÁRIO DE CONTATO */
+
+section.formulario {
+    padding: 80px 4%;
+}
+
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #242424;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #9c0505;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+}
+
+/* ESTILO DO FOOTER */
+
+footer{
+    padding: 60px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.041)
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;   
+}
+
+.borda {
+    border-top: 2px solid #9c0505;
+}
+
+footer .line-footer p ion-icon{
+    color: #9c0505;
+    font-size: 25px;
+}
+
+footer .line-footer p a{
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.logo-footer img{
+    width: 130px;
+    height: auto;
+    position: relative;
+    border: 0;
+    border-radius: 30px;
+}

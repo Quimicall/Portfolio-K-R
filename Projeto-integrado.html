@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Projeto integrado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        header {
+            background-color: #ffffff;
+            color: #000000;
+            text-align: center;
+            padding: 20px 0;
+        }
+        header img {
+            max-width: 100px;
+        }
+        .pink-bar {
+            background-color: #ff3399;
+            height: 100px;
+            position: absolute;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        .container {
+            max-width: 350px;
+            margin-top: 125px;
+            width: 100%;
+            padding: 20px;
+        }
+        .teacher {
+            background-color: #fff;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .teacher img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+        .calculate-box {
+            margin-top: 20px;
+        }
+        .calculate-box input {
+            width: 50px;
+            background-color: #cec3c9; /* Cor de fundo rosa */
+            color: #fff;
+            border: none;
+            padding: 10px;
+        }
+        .calculate-box input::placeholder {
+            color: #fff; /* Cor do texto "Hora" */
+        }
+        .calculate-box button {
+            background-color: #ff3399;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .price-box {
+            background-color: #cec3c9;
+            color: #000000;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .buy-button {
+            background-color: #ff3399;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="pink-bar">
+            <img src="logo-demillus-1024.png" alt="Logo da sua empresa">
+            <h1>Bem-vindo à nossa equipe de Assessores!</h1>
+        </div>
+    </header>
+    <div class="container">
+        <section class="teacher">
+            <img src="image-raquel.png" alt="Foto do Assessor 1">
+            <h2>Assessor 1</h2>
+            <p>Descrição do Assessor 1.</p>
+            <p>Preço: R$200,00 por consulta</p>
+            <div class="calculate-box">
+                <input type="number" placeholder="Hora" id="hours1" min="0">
+                <button onclick="calculatePrice(1)">Calcular valor total</button>
+                <div class="price-box" id="price1"></div>
+                <button class="buy-button" id="buyButton1" onclick="buy(1)">Comprar</button>
+            </div>
+        </section>
+        <section class="teacher">
+            <img src="image-katy.jpeg" alt="Foto do Assessor 2">
+            <h2>Assessor 2</h2>
+            <p>Descrição do Assessor 2.</p>
+            <p>Preço: R$150,00 por consulta</p>
+            <div class="calculate-box">
+                <input type="number" placeholder="Hora" id="hours2" min="0">
+                <button onclick="calculatePrice(2)">Calcular valor total</button>
+                <div class="price-box" id="price2"></div>
+                <button class="buy-button" id="buyButton2" onclick="buy(2)">Comprar</button>
+            </div>            
+        </section>
+    </div>
+
+    <script>
+        function calculatePrice(id) {
+            const hoursInput = document.getElementById(`hours${id}`);
+            const priceBox = document.getElementById(`price${id}`);
+            const buyButton = document.getElementById(`buyButton${id}`);
+
+            const hours = parseInt(hoursInput.value);
+            if (!isNaN(hours)) {
+                let basePrice, additionalCost;
+
+                if (id === 1) {
+                    basePrice = 0;
+                    additionalCost = Math.max(0, hours ) * 200; // Adiciona R$ 200,00 por hora a partir da primeira hora
+                } else if (id === 2) {
+                    basePrice = 0;
+                    additionalCost = Math.max(0, hours ) * 150; // Adiciona R$ 150,00 por hora a partir da primeira hora
+                }
+
+                const totalPrice = basePrice + additionalCost;
+                priceBox.textContent = `Valor total: R$${totalPrice.toFixed(2)}`;
+                buyButton.style.display = "block";
+            } else {
+                priceBox.textContent = "";
+                buyButton.style.display = "none";
+            }
+        }
+    </script>
+</body>
+</html>
